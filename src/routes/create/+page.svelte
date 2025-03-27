@@ -5,7 +5,7 @@
 	let text = $state('');
 
 	function copy() {
-		navigator.clipboard.writeText(window.location.host + "/game/" + btoa(text));
+		navigator.clipboard.writeText(window.location.host + "/top-o-the_word/game?word=" + btoa(text));
 		show_modal = true;
 		setTimeout(function() {
 			show_modal = false;

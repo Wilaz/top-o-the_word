@@ -8,6 +8,9 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'@componets': path.resolve('./src/componets')
+		},
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/top-o-the_word' : ''
 		}
 	}
 };
