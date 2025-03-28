@@ -8,6 +8,9 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'@componets': path.resolve('./src/componets')
+		},
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	}
 };
