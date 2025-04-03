@@ -3,9 +3,10 @@
 
 	let show_modal = $state(false);
 	let text = $state('');
+	let link = $derived('https://wilaz.github.io/top-o-the_word/game?word=' + btoa(text));
 
 	function copy() {
-		navigator.clipboard.writeText(window.location.host + '/game?word=' + btoa(text));
+		navigator.clipboard.writeText(link);
 		show_modal = true;
 		setTimeout(function () {
 			show_modal = false;
@@ -26,4 +27,5 @@
 	<h1 class="text-center text-4xl">Enter words</h1>
 	<textarea class="textarea size-full" placeholder="gort verenge" bind:value={text}></textarea>
 	<button type="submit" class="btn" onclick={copy}> Copy link </button>
+	<a class="btn" href={link}> Open </a>
 </div>
